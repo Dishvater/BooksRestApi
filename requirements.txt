@@ -3,4 +3,5 @@ djangorestframework==3.10.3
 django-filter==2.2.0
 sqlparse
 psycopg2
-django-extensions
+gunicorn
+
