@@ -1,1 +1,1 @@
-web: gunicorn restapi.wsgi
+web: gunicorn restapi.restapi.wsgi
