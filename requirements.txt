@@ -4,4 +4,4 @@ django-filter==2.2.0
 sqlparse
 psycopg2
 gunicorn
-
+django-heroku
