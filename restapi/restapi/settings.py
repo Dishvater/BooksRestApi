@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'django_extensions',
-    'restapi.api',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'restapi.restapi.urls'
+ROOT_URLCONF = 'restapi.urls'
 
 TEMPLATES = [
     {
