@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'restapi.urls'
+ROOT_URLCONF = 'restapi.restapi.urls'
 
 TEMPLATES = [
     {
