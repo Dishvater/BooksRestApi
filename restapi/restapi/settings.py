@@ -23,7 +23,7 @@ DEBUG = False
 
 SECRET_KEY = 'z8x5sk#*p%f3dvil=^wmfgw1c2xbcj$rm9wnhhr5yc3$$ocj$#'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://books-rest-api-stxnext.herokuapp.com']
 
 # Application definition
 
@@ -132,6 +132,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 5,
 }
+
+
 
 import django_heroku
 django_heroku.settings(locals())
