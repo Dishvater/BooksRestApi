@@ -1,6 +1,6 @@
 from rest_framework.routers import SimpleRouter
 
-from .views import BooksViewSet, AuthorsViewSet, DbUpdateView
+from .views import BooksViewSet
 
 router = SimpleRouter()
 

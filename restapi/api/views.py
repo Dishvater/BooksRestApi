@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 
 from .filters import DynamicSearchFilter
 from .models import Book, Author
-from .serializers import BooksSerializer, BooksPublishedDateSerializer, AuthorsSerializer, ExternalDataSerializer
+from .serializers import BooksSerializer
 
 
 # Create your views here.
