@@ -1,10 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
+from requests import Response
 from rest_framework import viewsets, status, filters, generics
+from rest_framework.views import APIView
 
 from .filters import DynamicSearchFilter
-from .models import Book
-from .serializers import BooksSerializer, BooksPublishedDateSerializer
+from .models import Book, Author
+from .serializers import BooksSerializer, BooksPublishedDateSerializer, AuthorsSerializer, ExternalDataSerializer
 
 
 # Create your views here.
@@ -24,22 +26,10 @@ class BooksViewSet(viewsets.ModelViewSet):
     lookup_field = "bookid"
     filter_backends = (filters.OrderingFilter, CustomSearchFilter)
     # filter_backends = [DjangoFilterBackend]
-    filter_fields = ("published_date", "bookid")
+    filterset_fields = ["author__name"]
+    filter_fields = ("published_date", "bookid", "title")
     ordering_fields = ("published_date",)
-    search_fields = ("authors__name", "published_date")
-    #
-    # def book_by_id(self, bookid):
-    #     queryset = Book.object.get(bookid=bookid)
-    #     return queryset
-
-
-#
-# class BookByIdViewSet(viewsets.ModelViewSet):
-#     serializer_class = BooksSerializer
-#
-#     def get_queryset(self):
-#         queryset = Book.objects.filter(bookid=bookid)
-#         return Book.objects.filter(bookid=bookid)
+    search_fields = ("author__name", "published_date", "^title")
 
 
 class QuestionsAPIView(generics.ListCreateAPIView):

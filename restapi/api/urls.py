@@ -1,10 +1,9 @@
 from rest_framework.routers import SimpleRouter
 
-from .views import BooksViewSet
+from .views import BooksViewSet, AuthorsViewSet, DbUpdateView
 
 router = SimpleRouter()
 
-router.register("", BooksViewSet, basename="books")
-# router.register("{bookid}", BooksViewSet, basename="booksbyid")
+router.register("books", BooksViewSet, basename="books")
 
 urlpatterns = router.urls

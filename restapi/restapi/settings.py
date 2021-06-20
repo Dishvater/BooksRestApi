@@ -25,7 +25,7 @@ DEBUG = False
 
 SECRET_KEY = 'z8x5sk#*p%f3dvil=^wmfgw1c2xbcj$rm9wnhhr5yc3$$ocj$#'
 
-ALLOWED_HOSTS = ['dishvater.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'dishvater.pythonanywhere.com']
 
 
 # Application definition

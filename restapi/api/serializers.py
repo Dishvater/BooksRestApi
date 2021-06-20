@@ -38,6 +38,7 @@ class BooksSerializer(serializers.ModelSerializer):
     # categories = MyPrimaryKeyRelatedField(queryset=Category.objects.all())
     authors = serializers.StringRelatedField(many=True, read_only=True)
     categories = serializers.StringRelatedField(read_only=True)
+
     # thumbnail = serializers.HyperlinkedRelatedField(read_only=True, view_name='thumbnail')
 
     class Meta:
